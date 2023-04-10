@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/BookSlice';
 
 const AddBook = () => {
@@ -16,14 +17,13 @@ const AddBook = () => {
       [e.target.name]: e.target.value,
     }));
   };
-
   const handleClick = (e) => {
     e.preventDefault();
-    const book = { ...input };
+    const id = uuidv4();
+    const book = { id, ...input };
     dispatch(addBook(book));
     setInputs(initialInputs);
   };
-
   return (
     <form onSubmit={handleClick}>
       <input
@@ -33,7 +33,6 @@ const AddBook = () => {
         value={input.title}
         placeholder="title"
       />
-
       <input
         type="text"
         name="author"
@@ -41,7 +40,6 @@ const AddBook = () => {
         value={input.author}
         placeholder="author"
       />
-
       <button type="submit" onClick={handleClick}>
         Add Book
       </button>

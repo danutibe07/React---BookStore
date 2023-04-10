@@ -5,20 +5,15 @@ import { removeBook } from '../redux/books/BookSlice';
 
 const Book = ({ book }) => {
   const dispatch = useDispatch();
-
   return (
     <>
-      <li key={book.id}>
-        <strong>
-          Title:
-          {book.title}
-        </strong>
-        <br />
-        <i>
-          Author:
-          {book.author}
-        </i>
-      </li>
+      <p key={book.id}>
+        <strong>{book.title}</strong>
+        {' '}
+        <span>by</span>
+        {' '}
+        <i>{book.author}</i>
+      </p>
       <button
         type="button"
         onClick={() => {
@@ -28,15 +23,14 @@ const Book = ({ book }) => {
         Delete
       </button>
     </>
-
   );
 };
 
 Book.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
+    id: PropTypes.string,
+    title: PropTypes.string,
+    author: PropTypes.string,
   }).isRequired,
 };
 
