@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+
 const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
 const urlEndPoint = 'RFxxJwmoRBEoRgECVtEq/books/';
 const url = baseUrl + urlEndPoint;
@@ -24,7 +25,7 @@ const changeToObjectData = (data) => {
   return newDataArray;
 };
 
-export const getBooksData = createAsyncThunk('books/getBooksData', async () => {
+export const getBooks = createAsyncThunk('books/getBooks', async () => {
   try {
     const dataStream = await axios(url);
     let data = Object.entries(dataStream.data);
@@ -35,7 +36,7 @@ export const getBooksData = createAsyncThunk('books/getBooksData', async () => {
   }
 });
 
-export const postBookToApi = createAsyncThunk(
+export const postBook = createAsyncThunk(
   'books/postBookToApi',
   async ({ id, title, author }) => {
     try {
@@ -52,7 +53,7 @@ export const postBookToApi = createAsyncThunk(
   },
 );
 
-export const deleteBookFromApi = createAsyncThunk('books/deleteBookFromApi', async (id) => {
+export const deleteBook = createAsyncThunk('books/deleteBook', async (id) => {
   try {
     const dataStream = await axios.delete(url + id);
     return dataStream;
@@ -65,33 +66,33 @@ const booksSlice = createSlice({
   name: 'books',
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(getBooksData.pending, (state) => {
+    builder.addCase(getBooks.pending, (state) => {
       state.isLoading = true;
     });
-    builder.addCase(getBooksData.fulfilled, (state, action) => {
+    builder.addCase(getBooks.fulfilled, (state, action) => {
       state.isLoading = false;
       state.books = action.payload;
     });
-    builder.addCase(getBooksData.rejected, (state) => {
+    builder.addCase(getBooks.rejected, (state) => {
       state.isLoading = false;
       state.error = true;
     });
-    builder.addCase(postBookToApi.pending, (state) => {
+    builder.addCase(postBook.pending, (state) => {
       state.ifSuccess = false;
     });
-    builder.addCase(postBookToApi.fulfilled, (state) => {
+    builder.addCase(postBook.fulfilled, (state) => {
       state.ifSuccess = true;
     });
-    builder.addCase(postBookToApi.rejected, (state) => {
+    builder.addCase(postBook.rejected, (state) => {
       state.ifSuccess = false;
     });
-    builder.addCase(deleteBookFromApi.pending, (state) => {
+    builder.addCase(deleteBook.pending, (state) => {
       state.ifSuccess = false;
     });
-    builder.addCase(deleteBookFromApi.fulfilled, (state) => {
+    builder.addCase(deleteBook.fulfilled, (state) => {
       state.ifSuccess = true;
     });
-    builder.addCase(deleteBookFromApi.rejected, (state) => {
+    builder.addCase(deleteBook.rejected, (state) => {
       state.ifSuccess = false;
     });
   },
