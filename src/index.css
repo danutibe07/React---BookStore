@@ -7,8 +7,22 @@
   box-sizing: border-box;
 }
 
+:root {
+  --azure: #0290ff;
+  --cool-blue: #4386bf;
+  --black: #121212;
+  --white-Two: #fff;
+  --pale-grey: #f5f6fa;
+  --very-light-pink: #c4c4c4;
+  --grey: #e8e8e8;
+  --linkColor: #212529;
+  --montserrat: 'Montserrat', sans-serif;
+  --robotoslab: 'Roboto Slab', serif;
+  --medium-blue: #307bbe;
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--montserrat);
 }
 
 input {
@@ -19,11 +33,11 @@ input {
 a {
   text-decoration: none;
   font-size: 16px;
-  color: #121212;
+  color: var(--black);
 }
 
 .header p {
-  color: #0290ff;
+  color: var(--azure);
   width: 16rem;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
@@ -40,7 +54,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 40px;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .navlinks {
@@ -106,7 +120,7 @@ button {
 
 .button-contain button {
   padding-right: 0.6rem;
-  color: #0290ff;
+  color: var(--azure);
 }
 
 .book-items {
@@ -131,28 +145,28 @@ button {
   width: 12.313rem;
   height: 1.813rem;
   margin: 0.188rem 20.188rem 0 0;
-  font-family: RobotoSlab;
+  font-family: var(--robotoslab);
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.2px;
-  color: #121212;
+  color: var(--black);
 }
 
 .book-items .author {
   width: 6.688rem;
   height: 1.188rem;
   margin: 0.25rem 0 0;
-  font-family: RobotoSlab;
+  font-family: var(--robotoslab);
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #4386bf;
+  color: var(--cool-blue);
 }
 
 .track {
@@ -163,9 +177,9 @@ button {
 
 .track button {
   padding: 15px;
-  background-color: #0290ff;
+  background-color: var(--azure);
   color: #fff;
-  font-family: RobotoSlab;
+  font-family: var(--robotoslab);
   border-radius: 5px;
 }
 
@@ -174,7 +188,7 @@ button {
   height: 2.063rem;
   padding: 13px;
   border-radius: 3px;
-  background-color: #0290ff;
+  background-color: var(--azure);
   color: #fff;
   margin-right: -20px;
 }
@@ -210,27 +224,27 @@ button {
   width: 9rem;
   height: 1.125rem;
   opacity: 0.5;
-  font-family: RobotoSlab;
+  font-family: var(--robotoslab);
   font-size: 0.813rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #121212;
+  color: var(--black);
 }
 
 .Current-Lesson {
   width: 13.25rem;
   height: 1.313rem;
   font-size: 1rem;
-  font-family: RobotoSlab;
+  font-family: var(--robotoslab);
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.4px;
-  color: #121212;
+  color: var(--black);
 }
 
 .progress-text h3 {
@@ -243,7 +257,7 @@ button {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #121212;
+  color: var(--black);
 }
 
 .addbook .booktitle {
@@ -273,12 +287,12 @@ button {
   margin: 1.188rem 2rem 0 2.125rem;
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
-  background-color: #0290ff;
+  background-color: var(--azure);
   color: #fff;
 }
 
 .Title {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--montserrat);
   padding: 1.5rem;
   width: 14rem;
   height: 1.5rem;
