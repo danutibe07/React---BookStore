@@ -192,11 +192,14 @@ button {
   width: 200px;
 }
 
+.addbookpage{
+  border-top: solid 1px #e8e8e8;
+  margin: 40px 30px 20px 30px;
+}
+
 .addbook {
   display: flex;
-  margin: 20px 30px 20px 30px;
   padding: 15px;
-  border-top: solid 1px #e8e8e8;
   justify-content: space-between;
 }
 
@@ -274,11 +277,11 @@ button {
   color: #fff;
 }
 
-.addbook .Title {
+.Title {
   font-family: "Montserrat", sans-serif;
-  width: 10.875rem;
+  padding: 1.5rem;
+  width: 14rem;
   height: 1.5rem;
-  margin: 1.813rem 32.75rem 1.188rem 0;
   font-size: 1.25rem;
   font-weight: bold;
   font-stretch: normal;
