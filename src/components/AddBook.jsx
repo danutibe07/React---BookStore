@@ -26,6 +26,7 @@ const AddBook = () => {
   };
   return (
     <form onSubmit={handleClick} className="addbook">
+      <h2 className="Title">Add Book</h2>
       <input
         type="text"
         className="booktitle"
