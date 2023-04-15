@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -15,35 +16,35 @@ input {
   padding: 10px;
 }
 
-a{
+a {
   text-decoration: none;
   font-size: 16px;
-  color: #121212 ;
+  color: #121212;
 }
 
-.header p{
+.header p {
   color: #0290ff;
   width: 16rem;
   height: 2.313rem;
   margin: 0.375rem 2.938rem 0.125rem 0;
   font-size: 1.875rem;
   font-weight: bold;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
-.App{
+.App {
   margin: 50px;
   background-color: #fafafa;
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   padding: 25px;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
-.navlinks{
+.navlinks {
   display: flex;
   gap: 20px;
   width: 3.688rem;
@@ -51,10 +52,10 @@ a{
   margin: 1.125rem 2.563rem 0.688rem 0;
   font-size: 0.813rem;
   letter-spacing: 1.9px;
-  color: #222222;
+  color: #222;
 }
 
-.icon{
+.icon {
   border-radius: 50%;
   border: 1px solid #e8e8e8;
   width: 50px;
@@ -62,32 +63,32 @@ a{
   padding: 17px;
 }
 
-.navcontent{
+.navcontent {
   display: flex;
 }
 
-.book-details{
+.book-details {
   display: flex;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 15px;
   justify-content: space-between;
   border: solid 1px #e8e8e8;
-  margin: 20px 35px 0 35px ;
+  margin: 20px 35px 0 35px;
 }
 
-.book{
+.book {
   display: flex;
   flex-direction: column;
   width: 350px;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
-button{
+button {
   border: none;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
-.button-contain{
+.button-contain {
   display: flex;
   text-decoration: none;
   list-style: none;
@@ -104,89 +105,94 @@ button{
   height: 120px;
 }
 
-.button-contain button{
-  padding-right: .6rem;
+.button-contain button {
+  padding-right: 0.6rem;
   color: #0290ff;
 }
 
-.book-items{
+.book-items {
   margin: 5px;
 }
 
-.book-items .category{
-    width: 5rem;
-    height: 1.125rem;
-    margin: 0 2.438rem 0 0;
-    opacity: 0.5;
-    font-size: 0.875rem;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #979197;
+.book-items .category {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #979197;
 }
 
-.book-items .title{
-    width: 12.313rem;
-    height: 1.813rem;
-    margin: 0.188rem 20.188rem 0 0;
-    font-family: 'Roboto Slab', serif;
-    font-size: 1.375rem;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: -0.2px;
-    color: #121212;
+.book-items .title {
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
 }
 
-.book-items .author{
-    width: 6.688rem;
-    height: 1.188rem;
-    margin: 0.25rem 0 0;
-    font-family: 'Roboto Slab', serif;
-    font-size: 0.875rem;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #4386bf;
+.book-items .author {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
 }
 
-.track{
+.track {
   display: flex;
   gap: 5px;
   margin: 16px;
   margin-left: 20rem;
 }
 
-.track button{
+.track button {
   padding: 15px;
   background-color: #0290ff;
-  color: #ffffff;
+  color: #fff;
   font-family: 'Roboto Slab', serif;
   border-radius: 5px;
 }
 
-.Update-progress{
+.Update-progress {
   margin-top: 25px;
+  width: 11.5rem;
+  height: 2.063rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #fff;
 }
 
-.progress-text{
+.progress-text {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin: 10px;
 }
 
-.book-progress{
+.book-progress {
   margin: 20px;
   width: 200px;
 }
 
-.addbook{
+.addbook {
   display: flex;
   margin: 20px 30px 20px 30px;
   padding: 15px;
@@ -194,7 +200,7 @@ button{
   justify-content: space-between;
 }
 
-.chapters{
+.chapters {
   padding: 20px;
 }
 
@@ -225,45 +231,37 @@ button{
   color: #121212;
 }
 
-.Update-progress {
-  width: 11.5rem;
-  height: 2.063rem;  
-  border-radius: 3px;
-  background-color: #0290ff;
-  color: #ffffff;
+.progress-text h3 {
+  width: 2.938rem;
+  height: 2.438rem;
+  margin: 0.063rem 7.063rem 0 0.688rem;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
 }
 
-.progress-text h3{
-    width: 2.938rem;
-    height: 2.438rem;
-    margin: 0.063rem 7.063rem 0 0.688rem;
-    font-size: 2rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #121212;
+.addbook .booktitle {
+  width: 41.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0 0;
+  padding: 0.813rem 35.688rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  outline: none;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
 }
 
-.addbook .booktitle{
-    width: 41.5rem;
-    height: 2.813rem;
-    margin: 1.188rem 2.125rem 0 0;
-    padding: 0.813rem 35.688rem 0.813rem 1.063rem;
-    border-radius: 4px;
-    outline:none;
-    border: solid 1px #e8e8e8;
-    background-color: #ffffff;
-}
-
-.addbook .bookauthor{
+.addbook .bookauthor {
   width: 17.813rem;
   height: 2.813rem;
   border-radius: 4px;
-  outline:none;
+  outline: none;
   border: solid 1px #e8e8e8;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .addbookbtn {
@@ -273,5 +271,5 @@ button{
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
   background-color: #0290ff;
-  color: #ffffff;
+  color: #fff;
 }
