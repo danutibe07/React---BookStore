@@ -28,6 +28,7 @@ const AddBook = () => {
     <form onSubmit={handleClick} className="addbook">
       <input
         type="text"
+        className="booktitle"
         onChange={handleChange}
         name="title"
         value={input.title}
@@ -35,12 +36,17 @@ const AddBook = () => {
       />
       <input
         type="text"
+        className="bookauthor"
         name="author"
         onChange={handleChange}
         value={input.author}
         placeholder="author"
       />
-      <button type="submit" onClick={handleClick}>
+      <button
+        type="submit"
+        className="addbookbtn"
+        onClick={handleClick}
+      >
         Add Book
       </button>
     </form>

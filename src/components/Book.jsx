@@ -50,13 +50,14 @@ const Book = ({ book }) => {
           <h3>{`${percentage}%`}</h3>
           <p className="Completed">Completed</p>
         </div>
-        <div className="chapters">
-          <p className="Current-Chapter">CURRENT CHAPTER</p>
-          <p className="Current-Lesson">Chapter 12</p>
-          <button type="button" className="Update-progress">
-            UPDATE PROGRESS
-          </button>
-        </div>
+      </div>
+      <div className="vl2" />
+      <div className="chapters">
+        <p className="Current-Chapter">CURRENT CHAPTER</p>
+        <p className="Current-Lesson">Chapter 12</p>
+        <button type="button" className="Update-progress">
+          UPDATE PROGRESS
+        </button>
       </div>
     </div>
   );
