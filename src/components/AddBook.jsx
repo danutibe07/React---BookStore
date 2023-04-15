@@ -25,7 +25,7 @@ const AddBook = () => {
     setInputs(initialInputs);
   };
   return (
-    <form onSubmit={handleClick}>
+    <form onSubmit={handleClick} className="addbook">
       <input
         type="text"
         onChange={handleChange}
