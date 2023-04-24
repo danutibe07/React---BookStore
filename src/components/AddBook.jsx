@@ -25,25 +25,30 @@ const AddBook = () => {
     setInputs(initialInputs);
   };
   return (
-    <form onSubmit={handleClick}>
-      <input
-        type="text"
-        onChange={handleChange}
-        name="title"
-        value={input.title}
-        placeholder="title"
-      />
-      <input
-        type="text"
-        name="author"
-        onChange={handleChange}
-        value={input.author}
-        placeholder="author"
-      />
-      <button type="submit" onClick={handleClick}>
-        Add Book
-      </button>
-    </form>
+    <div className="addbookpage">
+      <h2 className="Title">Add New Book</h2>
+      <form onSubmit={handleClick} className="addbook">
+        <input
+          type="text"
+          className="booktitle"
+          onChange={handleChange}
+          name="title"
+          value={input.title}
+          placeholder="title"
+        />
+        <input
+          type="text"
+          className="bookauthor"
+          name="author"
+          onChange={handleChange}
+          value={input.author}
+          placeholder="author"
+        />
+        <button type="submit" className="addbookbtn" onClick={handleClick}>
+          Add Book
+        </button>
+      </form>
+    </div>
   );
 };
 

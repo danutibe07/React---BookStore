@@ -2,8 +2,8 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
-const urlEndPoint = 'RFxxJwmoRBEoRgECVtEq/books/';
-const url = baseUrl + urlEndPoint;
+const EndPoint = 'RFxxJwmoRBEoRgECVtEq/books/';
+const url = baseUrl + EndPoint;
 const initialState = {
   books: [],
   isLoading: false,
@@ -36,22 +36,19 @@ export const getBooks = createAsyncThunk('books/getBooks', async () => {
   }
 });
 
-export const postBook = createAsyncThunk(
-  'books/postBookToApi',
-  async ({ id, title, author }) => {
-    try {
-      const dataStream = await axios.post(url, {
-        item_id: id,
-        title,
-        author,
-        category: 'fiction',
-      });
-      return dataStream;
-    } catch (err) {
-      return err;
-    }
-  },
-);
+export const postBook = createAsyncThunk('books/postBookToApi', async ({ id, title, author }) => {
+  try {
+    const dataStream = await axios.post(url, {
+      item_id: id,
+      title,
+      author,
+      category: 'fairy tales',
+    });
+    return dataStream;
+  } catch (err) {
+    return err;
+  }
+});
 
 export const deleteBook = createAsyncThunk('books/deleteBook', async (id) => {
   try {
